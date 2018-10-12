@@ -1,1 +1,1 @@
-# UofT-SCS---Data-Analytics-Bootcamp
+UofT Bootcamp Assignments
