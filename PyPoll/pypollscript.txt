@@ -1,0 +1,7 @@
+Poll Analysis
+--------------
+3521001 votes were cast.
+The list of candidates are + str(list_of_candidates)
+Here is the total of their votes: {'Khan': 2218230, 'Correy': 704199, 'Li': 492939, "O'Tooley": 105629}
+The vote percentage for Khan was 63%, Correy was 20%, Li was 14% and O'Tooley was 3%.
+The winner of the election is: Khan

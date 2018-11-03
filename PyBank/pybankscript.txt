@@ -1,0 +1,7 @@
+Financial Analysis
+-----
+There are 86 months in this dataset.
+The total profits are $38382578.
+The average change is $441349.34117647057.
+The greatest increase in profits is $1170593 in Feb-2012.
+The lowest increase in profits is $-1196225 in Sep-2013.
