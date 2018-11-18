@@ -1,0 +1,7 @@
+Uber Analysis
+--------------
+The four plots indicate that:
+1.  The highest average fare resides with the Suburban city type, despite having less rides.
+2.  Rural cities have the lowest number of rides, but have the highest average fares.
+3.  There are more Urban drivers than percentage of rides, while there are less percentages of Suburban and
+    Rural drivers in comparison to percentage of rides in those city types.
