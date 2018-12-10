@@ -1,0 +1,7 @@
+WeatherPy Analysis
+--------------
+The four plots indicate that:
+1. Cities with a negative latitude have colder tempuratures.
+2. Cloudiness and humidity seem to have little dependancy on latitude;
+   However, cities with a negative latitude have lower humidity levels.
+3. Wind speeds are fairly low, but cities with positive latitude tend to be windier.
