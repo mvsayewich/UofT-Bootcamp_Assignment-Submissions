@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Latitude Weather Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="MSayewich_stylesheet.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <button type="button" class="home.button">
+                        <a class="Home" href="MSayewich_mainpage.html">Dashboard Home</a>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="MSayewich_temppage.html">Temperature</a>
+                            </li>
+                            <li>
+                                <a href="MSayewich_humidpage.html">Humidity</a>
+                            </li>
+                            <li>
+                                <a href="MSayewich_cloudpage.html">Cloudiness</a>
+                            </li>
+                            <li>
+                                <a href="MSayewich_windpage.html">Wind Speed</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="MSayewich_comparisonpage.html">Comparison</a>
+                    </li>
+                    <li>
+                        <a href="MSayewich_datapage.html">Data</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="col-md-12">
+                <div class="sigline">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row row-grid">
+            <div class="col-md-8">
+                <div class="box box-left">
+                    <section id="intro">
+                        <h1>Summary</h1>
+                        <hr>
+                        <figure>
+                            <a target="_blank" href="resources/images/CityVTemp.png">
+                                <img id="main_image" src="resources/images/CityVTemp.png" alt="Latitude vs. Temperature Scatter Plot">
+                            </a>
+                        </figure>
+
+                        <section id="summary">
+                            <p>This website is dedicated to answering questions around what the weather is like as we get closer to the equator.
+                            </p>
+
+                            <p> Python was used to assign 1,500 random Latitude and Longitudes, to find a listing of cities close to the equator.
+                                OpenWeatherMapAPI was then utilized to obtain weather information for these cities. All cities with relevant data were used to create a dataframe of weather information.
+                            </p>
+
+                            <p>
+                                The data was analyzed across the three climate zones (Tropical Zone, Temperate Zone, and
+                                Polar Zone) and relationships were visualized through MatplotLib scatter plots to show:
+                            </p>
+
+                            <ul>
+                                <li>Latitude vs. Temperature (F) </li>
+                                <li>Latitude vs. Humidity (%)</li>
+                                <li>Latitude vs. Cloudiness (%)</li>
+                                <li>Latitude vs. Wind Speed (mph)</li>
+
+                            </ul>
+
+                        </section>
+
+                    </section>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="box box-right">
+                    <h2>Visualizations</h2>
+                    <hr>
+
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-3 col-md-6">
+                            <figure>
+                                <a href="MSayewich_temppage.html">
+                                    <img id="landing-visual" src="resources/images/CityVTemp.png" alt="Latitude vs. Temperature Scatter Plot">
+                                </a>
+                            </figure>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 col-md-6">
+                            <figure>
+                                <a href="MSayewich_humidpage.html">
+                                    <img id="landing-visual" src="resources/images/CityVHumidity.png" alt="Latitude vs. Humidity Scatter Plot">
+                                </a>
+                            </figure>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 col-md-6">
+                            <figure>
+                                <a href="MSayewich_cloudpage.html">
+                                    <img id="landing-visual" src="resources/images/CityVCloudiness.png" alt="Latitude vs. Cloudiness Scatter Plot">
+                                </a>
+                            </figure>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3 col-md-6">
+                            <figure>
+                                <a href="MSayewich_windpage.html">
+                                    <img id="landing-visual" src="resources/images/CityVWind.png" alt="Latitude vs. Wind Speed Scatter Plot">
+                                </a>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
