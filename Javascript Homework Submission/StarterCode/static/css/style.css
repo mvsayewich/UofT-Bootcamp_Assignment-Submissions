@@ -43,6 +43,15 @@ body {
   margin: 0;
 }
 
+.advanced-button {
+  float:right;
+  margin-right:0px;
+  color: white;
+  border: none;
+  padding: 5px;
+  text-align: center;
+}
+
 /* This CSS styles the ufo icon in the navbar */
 .nav-ufo {
   position: absolute;
@@ -189,6 +198,14 @@ select {
   .hero h1 {
     animation: smaller-title 1.2s forwards linear;
   }
+
+  .surprise {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  opacity: 0.5;
+}
 }
 
 /* keyframe animations which will be used to animate the title */
@@ -223,3 +240,21 @@ select {
     opacity: 1;
   }
 }
+
+h2 {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.span6 {
+  style="float: none;
+  margin: 0 auto;
+}
+

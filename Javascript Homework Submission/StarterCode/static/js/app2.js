@@ -1,6 +1,3 @@
-// from data.js
-var tableData = data;
-
 let tbody = d3.select("tbody");
 
 function table(data) {
@@ -16,18 +13,6 @@ function table(data) {
   });
 }
 
-function buttonClick() {
-
- d3.event.preventDefault();
-  let date = d3.select("#datetime").property("value");
-  let filteredData = tableData;
-  if (date) {
-    filteredData = filteredData.filter(row => row.datetime === date);
-  }
-  table(filteredData);
-}
-d3.selectAll("#filter-btn").on("click", buttonClick);
-table(tableData);
 
 // Get references to the elements of the DOM
 var $tbody = document.querySelector("tbody");
@@ -37,6 +22,11 @@ var $stateInput = document.querySelector("#state");
 var $countryInput = document.querySelector("#country");
 var $shapeInput = document.querySelector("#shape");
 var $searchBtn = document.querySelector("#search");
+var $recordCounter = document.querySelector("#recordCounter");
+var $pages = document.querySelector("#pages");
+var $loadBtn = document.querySelector("#load");
+var $nextBtn = document.querySelector("#next");
+var $prevBtn = document.querySelector("#prev");
 
 // Add event listeners
 $searchBtn.addEventListener("click", handleSearchButtonClick);
@@ -44,6 +34,7 @@ $searchBtn.addEventListener("click", handleSearchButtonClick);
 // Initialize global variables
 var filteredData = dataSet;
 var count = 0;
+
 
 // Search
 function handleSearchButtonClick() {
@@ -91,3 +82,4 @@ function handleSearchButtonClick() {
 
     renderTable();
 }
+
