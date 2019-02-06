@@ -27,6 +27,7 @@ function buttonClick() {
   table(filteredData);
 }
 d3.selectAll("#filter-btn").on("click", buttonClick);
+
 table(tableData);
 
 // Get references to the elements of the DOM
@@ -57,7 +58,9 @@ function handleSearchButtonClick() {
         filteredData = filteredData.filter(function (date) {
         var dataDate = date.datetime;
         return dataDate === filterDate;
-    });
+
+        table(filteredData);
+        });
 
     }
 
@@ -65,13 +68,17 @@ function handleSearchButtonClick() {
         filteredData = filteredData.filter(function (city) {
         var dataCity = city.city;
         return dataCity === filterCity;
-    });
+
+        table(filteredData);
+        });
     }
 
     if (filterState != "") {
         filteredData = filteredData.filter(function (state) {
             var dataState = state.state;
             return dataState === filterState;
+
+            table(filteredData);
         });
     }
 
@@ -79,6 +86,8 @@ function handleSearchButtonClick() {
         filteredData = filteredData.filter(function (country) {
             var dataCountry = country.country;
             return dataCountry === filterCountry;
+
+            table(filteredData);
         });
     }
 
@@ -86,8 +95,11 @@ function handleSearchButtonClick() {
         filteredData = filteredData.filter(function (shape) {
             var dataShape = shape.shape;
             return dataShape === filterShape;
+
+            table(filteredData);
         });
     }
+d3.selectAll("#filter-btn").on("click", handleSearchButtonClick);
 
     renderTable();
 }
