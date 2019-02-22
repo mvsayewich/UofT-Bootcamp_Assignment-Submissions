@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 
 #Database
-engine = create_engine("sqlite:///DataSets/belly_button_biodiversity.sqlite")
+engine = create_engine("sqlite:///db/belly_button_biodiversity.sqlite")
 
 # reflect an existing database into a new model
 Base = automap_base()
@@ -56,16 +56,8 @@ def otu():
 # Returns a json dictionary of sample metadata 
 @app.route('/metadata/<sample>')
 def sample_metadata(sample):
-        """Return the MetaData for a given sample."""
-    sel = [
-        Samples_Metadata.sample,
-        Samples_Metadata.ETHNICITY,
-        Samples_Metadata.GENDER,
-        Samples_Metadata.AGE,
-        Samples_Metadata.LOCATION,
-        Samples_Metadata.BBTYPE,
-        Samples_Metadata.WFREQ,
-    ]
+    """Return the MetaData for a given sample."""
+    sel = [Samples_Metadata.sample, Samples_Metadata.ETHNICITY, Samples_Metadata.GENDER, Samples_Metadata.AGE, Samples_Metadata.LOCATION, Samples_Metadata.BBTYPE, Samples_Metadata.WFREQ]
 
     results = db.session.query(*sel).filter(Samples_Metadata.sample == sample).all()
 
