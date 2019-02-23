@@ -1,0 +1,59 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Unknown </title></head><body>
+<h1 id="unit-16-assignment-data-journalism-and-d3">Unit 16 | Assignment - Data Journalism and D3</h1>
+<p><img alt="Newsroom" src="https://media.giphy.com/media/v2xIous7mnEYg/giphy.gif"/></p>
+<h2 id="background">Background</h2>
+<p>Welcome to the newsroom! You've just accepted a data visualization position for a major metro paper. You're tasked with analyzing the current trends shaping people's lives, as well as creating charts, graphs, and interactive elements to help readers understand your findings.</p>
+<p>The editor wants to run a series of feature stories about the health risks facing particular demographics. She's counting on you to sniff out the first story idea by sifting through information from the U.S. Census Bureau and the Behavioral Risk Factor Surveillance System.</p>
+<p>The data set included with the assignment is based on 2014 ACS 1-year estimates: <a href="https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml">https://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml</a>, but you are free to investigate a different data set. The current data set incldes data on rates of income, obesity, poverty, etc. by state. MOE stands for "margin of error."</p>
+<h2 id="your-task">Your Task</h2>
+<h3 id="level-1-d3-dabbler">Level 1: D3 Dabbler</h3>
+<p><img alt="4-scatter" src="4-scatter-1.jpg"/></p>
+<p>You need to create a scatter plot between two of the data variables such as <code>Healthcare vs. Poverty</code> or <code>Smokers vs. Age</code>.</p>
+<p>Using the D3 techniques we taught you in class, create a scatter plot that represents each state with circle elements. You'll code this graphic in the <code>app.js</code> file of your homework directory—make sure you pull in the data from <code>data.csv</code> by using the <code>d3.csv</code> function. Your scatter plot should ultimately appear like the image at the top of this section.</p>
+<ul>
+<li>
+<p>Include state abbreviations in the circles.</p>
+</li>
+<li>
+<p>Create and situate your axes and labels to the left and bottom of the chart.</p>
+</li>
+<li>
+<p>Note: You'll need to use <code>python -m http.server</code> to run the visualization. This will host the page at <code>localhost:8000</code> in your web browser.</p>
+</li>
+</ul>
+<hr/>
+<h3 id="level-2-impress-the-boss-optional-challenge-assignment">Level 2: Impress the Boss (Optional Challenge Assignment)</h3>
+<p>Why make a static graphic when D3 lets you interact with your data?</p>
+<p><img alt="7-animated-scatter" src="7-animated-scatter-1.gif"/></p>
+<h4 id="1-more-data-more-dynamics">1. More Data, More Dynamics</h4>
+<p>You're going to include more demographics and more risk factors. Place additional labels in your scatter plot and give them click events so that your users can decide which data to display. Animate the transitions for your circles' locations as well as the range of your axes. Do this for two risk factors for each axis. Or, for an extreme challenge, create three for each axis.</p>
+<ul>
+<li>Hint: Try binding all of the CSV data to your circles. This will let you easily determine their x or y values when you click the labels.</li>
+</ul>
+<h4 id="2-incorporate-d3-tip">2. Incorporate d3-tip</h4>
+<p>While the ticks on the axes allow us to infer approximate values for each circle, it's impossible to determine the true value without adding another layer of data. Enter tooltips: developers can implement these in their D3 graphics to reveal a specific element's data when the user hovers their cursor over the element. Add tooltips to your circles and display each tooltip with the data that the user has selected. Use the <code>d3-tip.js</code> plugin developed by <a href="https://github.com/Caged">Justin Palmer</a>—we've already included this plugin in your assignment directory.</p>
+<p><img alt="8-tooltip" src="8-tooltip-1.gif"/></p>
+<ul>
+<li>Check out <a href="https://bl.ocks.org/davegotz/bd54b56723c154d25eedde6504d30ad7">David Gotz's example</a> to see how you should implement tooltips with d3-tip.</li>
+</ul>
+<hr/>
+<h3 id="assessment">Assessment</h3>
+<p>Your final product will be assessed on the following metrics:</p>
+<ul>
+<li>
+<p>Completion of all steps in chosen level</p>
+</li>
+<li>
+<p>Coherency of scatter plot (labels, ticks)</p>
+</li>
+<li>
+<p>Visual attraction</p>
+</li>
+<li>
+<p>Professionalism</p>
+</li>
+</ul>
+<p><strong>Good luck!</strong></p>
+<h2 id="copyright">Copyright</h2>
+<p>Data Boot Camp © 2018. All Rights Reserved.</p>
+</body></html>
